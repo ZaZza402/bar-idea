@@ -1,0 +1,72 @@
+/* src/components/LiveStatus.css */
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 112, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(46, 204, 112, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 112, 0);
+  }
+}
+
+.live-status-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* Per adattarsi a schermi piccoli */
+  gap: 1rem;
+}
+
+.status-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+}
+
+.status-dot.open {
+  background-color: #2ecc71; /* Verde brillante */
+  animation: pulse 2s infinite;
+}
+
+.status-dot.closed {
+  background-color: #e74c3c; /* Rosso morbido */
+}
+
+.status-text-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Occupa lo spazio disponibile */
+  margin-left: 1rem;
+}
+
+.status-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.live-time {
+  font-size: 0.9rem;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+.status-countdown {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+}

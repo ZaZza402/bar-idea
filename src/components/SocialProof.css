@@ -1,0 +1,90 @@
+/* src/components/SocialProof.css */
+
+.social-proof-section {
+  background-color: var(--bg-color);
+  padding-bottom: 50px;
+}
+
+.social-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: var(--secondary-color);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--primary-color);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(245, 245, 245, 0.9);
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Fa sì che il testo occupi lo spazio per allineare gli autori */
+  z-index: 2; /* Per stare sopra l'icona della citazione */
+}
+
+.testimonial-author {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: right;
+  z-index: 2;
+}
+
+/* Stili specifici per la card delle piattaforme */
+.platforms-card {
+  text-align: center;
+  justify-content: center; /* Centra il contenuto verticalmente */
+}
+
+.platforms-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.platforms-card p {
+  color: rgba(245, 245, 245, 0.8);
+  margin-bottom: 2rem;
+}
+
+.platforms-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.platforms-badges a {
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.platforms-badges a:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.platforms-badges svg {
+  height: 40px;
+  width: 40px;
+  fill: currentColor; /* Eredita il colore dal tag <a> */
+}

@@ -1,0 +1,30 @@
+/* src/components/WhatsAppButton.css */
+
+.whatsapp-float-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color); /* Colore del sito */
+  color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  z-index: 1000; /* Per stare sopra a tutto */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-float-button:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 8px 20px rgba(234, 168, 0, 0.4);
+}
+
+.whatsapp-float-button svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--bg-color);
+}

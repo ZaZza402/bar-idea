@@ -1,0 +1,99 @@
+/* src/components/RollingGallery.css */
+
+.gallery-section {
+    padding-top: 0;
+}
+
+.gallery-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.gallery-gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  z-index: 10;
+}
+
+.gallery-gradient-left {
+  left: 0;
+  background: linear-gradient(to left, rgba(10, 10, 10, 0) 0%, var(--bg-color) 100%);
+}
+
+.gallery-gradient-right {
+  right: 0;
+  background: linear-gradient(to right, rgba(10, 10, 10, 0) 0%, var(--bg-color) 100%);
+}
+
+.gallery-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.gallery-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  transform-style: preserve-3d;
+}
+
+.gallery-track:active {
+    cursor: grabbing;
+}
+
+/* --- THE CSS FIX STARTS HERE --- */
+
+.gallery-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 1. We add padding. This creates a buffer zone inside the container. */
+  /* Using 'rem' makes it scale nicely with font size changes. */
+  padding: 0 1rem;
+  backface-visibility: hidden;
+}
+
+.gallery-img {
+  pointer-events: none;
+  /* 2. The image fills 100% of its container's PADDED width. */
+  width: 100%; 
+  /* 3. We use height: auto to maintain aspect ratio, and max-height to control size. */
+  height: auto;
+  max-height: 220px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+/* --- END OF CSS FIX --- */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-img {
+    max-height: 180px;
+  }
+  .gallery-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-img {
+      max-height: 120px;
+  }
+  .gallery-item {
+    padding: 0 0.5rem; /* Reduce padding on smallest screens */
+  }
+}

@@ -1,0 +1,88 @@
+/* src/components/Footer.css */
+
+.footer {
+  background-color: var(--secondary-color);
+  color: rgba(245, 245, 245, 0.7);
+  padding: 4rem 5% 2rem 5%;
+  margin-top: 50px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer-column p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a, .footer-link {
+  color: rgba(245, 245, 245, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-column a:hover, .footer-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: rgba(245, 245, 245, 0.7);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  height: 28px;
+  width: 28px;
+  fill: currentColor;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: rgba(245, 245, 245, 0.5);
+}
+
+.mockup-credit {
+  font-size: 0.8rem;
+}

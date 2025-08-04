@@ -1,0 +1,27 @@
+// src/components/Hero.jsx
+import React from 'react';
+import './Hero.css';
+import heroVideo from '../assets/video/hero-video.mp4';
+
+const Hero = () => {
+  return (
+    <div className="hero-container">
+      <video className="hero-video" autoPlay loop muted playsInline>
+        <source src={heroVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="hero-overlay"></div>
+      <div className="hero-content">
+        <h1 className="hero-title">Wood’s Bar</h1>
+        <p className="hero-slogan">Il Tuo Rifugio a Roma.</p>
+        {/* --- PULSANTE AGGIUNTO QUI --- */}
+        <a href="#menu" className="hero-button">
+          Vedi Menu
+        </a>
+        {/* --- FINE AGGIUNTA --- */}
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
