@@ -9,13 +9,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         
-        {/* Colonna 1: Brand */}
+        {/* Column 1: Brand */}
         <div className="footer-column">
-          <h3>Wood’s Bar</h3>
-          <p>Il tuo rifugio a Roma, dall'alba al tramonto. Qualità e atmosfera unica, ogni giorno.</p>
+          <h3>The Alibi Lounge</h3> {/* <-- Generic Name */}
+          <p>Il tuo rifugio urbano, dall'alba al tramonto. Qualità e atmosfera unica, ogni giorno.</p>
         </div>
 
-        {/* Colonna 2: Navigazione */}
+        {/* Column 2: Navigation */}
         <div className="footer-column">
           <h3>Navigazione</h3>
           <ul>
@@ -25,17 +25,19 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Colonna 3: Contatti */}
+        {/* Column 3: Contacts */}
         <div className="footer-column">
           <h3>Contatti</h3>
-          <p>Via della Massimilla, 34<br/>00166 Roma RM, Italia</p>
-          <p><a href="tel:+390612345678" className="footer-link">Tel: +39 06 1234 5678</a></p>
+          {/* Generic Address & Phone */}
+          <p>Via del Corso, 101<br/>00186 Roma RM, Italia</p>
+          <p><a href="tel:+390698765432" className="footer-link">Tel: +39 06 9876 5432</a></p>
         </div>
 
-        {/* Colonna 4: Social */}
+        {/* Column 4: Social Links (Restored with placeholder links) */}
         <div className="footer-column">
           <h3>Seguici</h3>
           <div className="social-links">
+            {/* Using "#" as a placeholder is standard for mockups */}
             <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
             </a>
@@ -50,7 +52,7 @@ const Footer = () => {
 
       </div>
       <div className="footer-bottom">
-        <p>© {currentYear} Wood’s Bar. Tutti i diritti riservati.</p>
+        <p>© {currentYear} The Alibi Lounge. Tutti i diritti riservati.</p> {/* <-- Generic Name */}
         <p className="mockup-credit">Designed by Alex M</p>
       </div>
     </footer>

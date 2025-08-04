@@ -12,13 +12,11 @@ const Hero = () => {
       </video>
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1 className="hero-title">Wood’s Bar</h1>
-        <p className="hero-slogan">Il Tuo Rifugio a Roma.</p>
-        {/* --- PULSANTE AGGIUNTO QUI --- */}
+        <h1 className="hero-title">The Alibi Lounge</h1> {/* <-- NAME CHANGED */}
+        <p className="hero-slogan">Dove Iniziano le Storie.</p> {/* <-- SLOGAN CHANGED */}
         <a href="#menu" className="hero-button">
           Vedi Menu
         </a>
-        {/* --- FINE AGGIUNTA --- */}
       </div>
     </div>
   );
