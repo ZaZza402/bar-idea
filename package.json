@@ -2,10 +2,13 @@
   "name": "woods-bar-mockup",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://ZaZza402.github.io/bar-idea",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
